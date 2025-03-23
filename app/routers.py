@@ -16,7 +16,7 @@ def get_db():
 @router.post("/shorten", response_model=URLResponse)
 def create_short_url(request: URLCreate, db: Session = Depends(get_db)):
     url = shorten_url(db, request.long_url)
-    return URLResponse(short_url=f"http://localhost:8000/{url.short_code}", long_url=url.long_url, visit_count=url.visit_count)
+    return URLResponse(short_url=f"https://url-shortener-2-uyh8.onrender.com/{url.short_code}", long_url=url.long_url, visit_count=url.visit_count)
 
 @router.get("/{short_code}")
 def redirect_url(short_code: str, db: Session = Depends(get_db)):

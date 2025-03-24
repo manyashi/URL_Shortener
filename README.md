@@ -1,20 +1,20 @@
-URL Shortener API
+**URL SHORTENER API**
 
-Description
+1. **Description**
 
 A simple URL shortening service similar to Bit.ly, built using FastAPI and PostgreSQL.
 
-Features
+2. **Features**
 
-Shorten long URLs into short, easy-to-share links.
+- Shorten long URLs into short, easy-to-share links.
 
-Redirect users from short URLs to original long URLs.
+- Redirect users from short URLs to original long URLs.
 
-Track the number of times a short URL has been visited.
+- Track the number of times a short URL has been visited.
 
-FastAPI provides an interactive API documentation.
+- FastAPI provides an interactive API documentation.
 
-API Endpoints
+3. **API Endpoints**
 
 Shorten a URL
 
@@ -22,33 +22,33 @@ Endpoint: POST /shorten
 
 Request Body:
 
-{
+**{
   "long_url": "https://example.com"
-}
+}**
 
 Response:
 
-{
-  "short_url": "https://your-deployment-url.com/abc123",
+**{
+  "short_url": "https://url-shortener-2-uyh8.onrender.com/c984d0",
   "long_url": "https://example.com",
   "visit_count": 0
-}
+}**
 
 Redirect to Long URL
 
 Endpoint: GET /{short_code}
 
-Example: GET /abc123
+Example: GET /c984d0
 
 Redirects the user to the original URL.
 
-API Documentation
+4. **API Documentation**
 
 Once the server is running, visit:
 
 FastAPI Documentation : https://url-shortener-2-uyh8.onrender.com/docs#/default/redirect_url__short_code__get
 
-Deployment
+5. **Deployment**
 
 Deploy the API using Render
 
